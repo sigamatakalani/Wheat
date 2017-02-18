@@ -1,0 +1,101 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{array}
+\newcolumntype{L}{>{\centering\arraybackslash}m{8cm}}
+
+%	Mia Gerber 
+%	15016502
+%	
+%	COS 301: Assignment 1
+%
+%	Subsections 2.2 to 2.5
+
+\begin{document}
+	\newpage
+	\section{Overall Description}
+	\subsection{Product Functions}
+		\begin{table}[!htbp]
+			\centering
+			\footnotesize
+			\label{tab:table 2.2}
+			\bgroup
+			\def\arraystretch{1.3}
+			\begin{tabular}{|L|L|}
+				\hline
+				FUNCTION & DESCRIPTION 
+				\\
+				\hline
+				Corrects/recalculates the path if the user
+				 is not following the route correctly. & If the user takes a wrong turn, the application will send a push notification to the user’s device, telling them that they are no longer on the correct route. The user can then either choose to recalculate the route and follow the new path or they can ask to be directed back to the original path.
+				 
+				\\
+				\hline
+				Users can search for a building/location and the system will find it. & The name that the user requested can be mapped to a physical location on the UP campus. (The coordinates of specific buildings are associated with the name of the building)
+				\\
+				\hline
+				The user can specify a current location and destination using the search facility. & The current location and destination are saved so that it can be used to determine the route later on. 
+				\\
+				\hline
+				The user can use parameters so that the application can choose the optimal route for their purposes. & The application will provide several routes that the user can take to arrive at their destination, then choose from the routes generated the path that matches the criteria given by the user e.g. “shortest route” or “route that has a bathroom along the way”
+				\\
+				\hline
+				The application gives step by step directions on how to reach your destination & The application in real time tracks where the user is currently walking and then gives them instructions either as push notifications or audio when it is needed so the user stays on the plotted route, for example "turn left" or "take the stairs to the fourth floor". 
+				\\
+				\hline
+				The user can put their schedule into the application and it will generate a route for the whole day & The application will use your personalized timetable to determine a path that has every class you are going to that day along the route so that you don’t have to continually generate routes.
+				\\
+				\hline
+				The application tracks distance walked & You will get daily/weekly/monthly push notifications informing you of how far you have walked since a certain point in time (you can specify when the app should start calculating distance.)
+				\\
+				\hline
+				The application tracks which users have walked the furthest in a specific day/week/month. & The distance data from all users will be consolidated and a leader board will be created showing the top 5 students.
+				\\
+				\hline
+				
+				
+			\end{tabular}
+			\egroup
+			
+		\end{table}
+		
+	\subsection{User Characteristics}
+		\begin{itemize}
+			\small
+			\item Users will be both male and female
+			\item Users are university students ranging in age from 18 to 25
+			\item Users come from a vast array of different cultural and economic backgrounds
+			\item Users have graduated high school and have a median level of literacy
+			\item Users communicate in English using UK grammar and spelling conventions.
+			\item Users have used mobile devices before and are familiar with touchscreen interfaces
+			\item Users understand the basic concept of a wireless network and how to connect to it using a mobile device
+			\item Users will be both new students (no prior knowledge of the campus) and existing students (possess existing knowledge of campus)
+			\item Users might have disabilities, developers need to be conscious of this when designing the application. 
+		\end{itemize}
+	\subsection{Constraints}
+		\paragraph*{What restrictions will be affecting development?} 
+		The project requires that the application be implemented using the WiFi network on campus to determine the location of users, but because the signal strength and coverage of the network is not uniform across campus, this can severely impact the accuracy of the application and how useful it will end up being.
+		\\
+		\\
+		Continuing on from the previous constraint, we can assume that because there is not WiFi available in every single part of campus, sometimes the application will have to revert to using mobile data. Students will be using the application which means our application needs to use minimal mobile data. Designing data transfer that does not use a lot of mobile data is difficult and will require us to restrict the amount of real-time data transfer that is done by the application or to implement it in a way that means they are able to use the application offline for short periods of time.  
+		\\
+		\\
+		The experience of the development team may also end up becoming a constraint, the amount of features and functionality we are able to deliver on will depend largely on our technical skill level and whether we are able to come up with elegantly simple solutions.
+		\\
+		\\
+		We need to ensure that this application is deployed on all mobile platforms for all mobile devices (phones, tablets, laptops etc) this means we are unable to use platform specific technologies which limits the amount of solutions we will be able to produce. 
+		\\
+		\\
+		User privacy needs to be taken into account as a constraint on development. Some historical data about the user will need to be stored, but the type of data we are allowed to store will dictate which functionalities we are able to bring about in the application. For example, instead of showing you your 5 most visited places, the application will only tell you how many steps you've taken in a day. 
+		\\
+		\\
+		
+		
+	\subsection{Assumptions and Dependencies}
+		\begin{enumerate}
+			\item We are assuming that users will have the WiFi setting on their phones enabled at all times, our entire navigation system depends on this assumption because checking how the user's device connects to different routers as they move through campus is critical to determining their current location. 
+			\item We are assuming that the location of every WiFi router in the network is known and has been mapped onto a schematic of the Hatfield campus. We need to be able to locate the router that a user is connected to.
+			\item To generate a heatmap of the traffic conditions on campus (where the highest concentration of people currently are) we will need to assume that all students on campus both have the application downloaded and running while they are moving around on campus.
+			\item All possible solutions outlined in this document will work on the assumption that we have not been given any limit on the size of our database or the capacities of the server that will be used.
+		\end{enumerate}
+
+\end{document}
+
