@@ -1,0 +1,20 @@
+\documentclass[11pt]{article}
+\title{3.1 External Interface Requirements}
+\author{Ntiko Mathaba}
+
+\begin{document}
+\pagenumbering{roman}
+	\section{External Interface Requirements}
+		\subsection{System Interfaces}
+		The system is going to transform the information the user enters to output the directions to the users final destination. The system will then measure the distance in meters/kilometers and it will also estimate how long it will take the user to reach the final destination from the current location. The system will save the users input so that the user is able to search from history.
+		
+		\subsection{User Interfaces}
+		The user is going to enter the information using a keyboard. The user will be able to instruct the system using this input. The system should be able to enter new information according to the users preferences and interests.The system should provide the user with different routes to the final destination. It should have a short route to the final destination and a route that will go through the users preferences and interests. All of this will be ouputted to the users device screen.
+		
+		\subsection{Hardware Interfaces}
+		
+		
+		\subsection{Software Interfaces}
+
+		\subsection{Communication Interface}
+\end{document}
