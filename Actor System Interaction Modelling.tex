@@ -1,0 +1,62 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{array}
+\newcolumntype{L}{>{\raggedright\arraybackslash}m{8cm}}
+
+%	Mia Gerber 
+%	15016502
+%	
+%	COS 301: Assignment 1
+%
+%	Actor System Interaction Modelling
+
+\begin{document}
+	\newpage
+	\section{Actor System Interaction Modelling}
+		\begin{table}[!htbp]
+			\footnotesize
+			\label{tab:table 2.2}
+			\bgroup
+			\def\arraystretch{1.3}
+			\begin{tabular}{|L|L|}
+				\hline
+			\textbf{\textit{ACTOR - USER}} & \textbf{\textit{SYSTEM - UP NAV}}
+				\\
+				\hline
+				\textbf{1.} User opens application \linebreak \linebreak
+				\textbf{Precondition:} User does not know how to get somewhere. & \textbf{2.} Application opens on mobile device and lists all options for navigation. \linebreak \linebreak
+				\textbf{Precondition:} No user input has been given so a default screen is displayed.
+				\\
+				\hline
+				\textbf{3.} User successfully identifies the navigation option from start menu \linebreak \linebreak
+				 & \textbf{4.} System prompts user for destination to navigate to. \linebreak \linebreak
+				 \textbf{Postcondition:} After determining the user's location it can start searching for possible path for the destination.
+				\\
+				\hline
+				\textbf{5.} User adds a criteria (e.g. avoid traffic) to refine the route \linebreak \linebreak
+				\textbf{Postcondition:} Adding extra information results in a better path.
+				& \textbf{6.} System chooses a single route and prepares step-by-step instructions to deliver to the user telling them how to arrive at their destination. \linebreak \linebreak 
+				\textbf{Postcondition:} The GUI will display the route to the user and real-time navigation will begin as the user starts following the given directions.
+				\\
+				\hline
+				\textbf{7.} User follows push notifications and prompts along the chosen route \linebreak
+				& \textbf{8.} System tracks the user's movement, checking whether their movements correspond to the path given. \linebreak
+				\\
+				\hline
+				\textbf{9.} User strays from given route \linebreak \linebreak
+				\textbf{Postcondition:} User is no longer following the route and might not arrive at destination.
+				& \textbf{10.} Constantly tracking the user as he/she moves the application can see that the user is no longer on route and will prompt the user to go back onto the original path or suggest alternatives to follow. \linebreak \linebreak
+				\\
+				\hline
+				\textbf{11.} User gets back onto the right route and arrives at destination \linebreak \linebreak
+				\textbf{Precondition:} The user was following the wrong path \linebreak 
+				\textbf{Postcondition:} The user now follows the path that will lead to their destination.
+				& \textbf{12.} System alerts user that they have arrived at their destination through some visual feedback and exits the navigational mode. \linebreak
+				\\
+				\hline
+				
+				
+			\end{tabular}
+			\egroup
+			
+		\end{table}
+\end{document}
